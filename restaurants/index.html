@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>RestoNation</title>
+    <link rel="icon" href="images/logos/burger.png">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<header>
+    <div class="side-icon">
+        <span class="top"></span>
+        <span class="band" id="band">
+            <div id="notes" class="button spe">
+                <div class="mainiac" onclick="loadData('Null','notes+')">
+                    <img class="imged" src="images/logos/burger.png" alt="${info.name}">
+                    <div class="text">Par Notes</div>
+                </div>
+                <div class="inside">
+                    <span onclick="loadData('Null','notes-')">Croissant</span>
+                    <span onclick="loadData('Null','notes+')">Decroissant</span>
+                </div>
+            </div>
+            <div id="prix" class="button spe">
+                <div class="mainiac" onclick="loadData('Null','prix-')">
+                    <img class="imged" src="images/logos/burger.png" alt="${info.name}">
+                    <div class="text">Par Prix</div>
+                </div>
+                <div class="inside">
+                    <span onclick="loadData('Null','prix-')">Croissant</span>
+                    <span onclick="loadData('Null','prix+')">Decroissant</span>
+                </div>
+            </div>
+            <span class="spaning"></span>
+        </span>
+    </div>
+    <div class="align-top">
+        <div class="items">
+            <div class="menuicn">
+                <div class="style menu msr-filled" onclick="moveElements()"><img src="images/logos/burger.png" alt="logo-p"></div>
+                <span id="er"></span>
+            </div>
+            <div class="item">
+                <div>Maison</div>
+                <span></span>
+                <div onclick="loadData('all')">Restaurants</div>
+            </div>
+        </div>
+        <div class="searchBar">
+            <span class="msr-filled" onclick="getValue()">search</span>
+            <input type="text" placeholder="Recherche" name="name" id="search">
+            <span class="msr-filled" onclick="removeValue()">close</span>
+            <span class="msr-filled">arrow_downward</span>
+        </div>
+    </div>
+    <div class="align-bottom">
+        <div class="items">
+            <div class="menuicn">
+                <div class="style totop msr-filled" style="transform: rotate(270deg)" onclick="scrollToElement('fc')">arrow_forward_ios</div>
+            </div>
+        </div>
+    </div>
+</header>
+<body>
+    <section class="cards">
+        <div class="doc" id="documented"></div>
+        <div class="contain" id="contain"></div>
+    </section>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

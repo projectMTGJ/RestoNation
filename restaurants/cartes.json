@@ -1,0 +1,436 @@
+[
+    {
+        "name": "Starling",
+        "website": "https://www.starling-burgers.com/fr/",
+        "medal": true,
+        "stars": 5,
+        "type": "Burger",
+        "cost": {
+            "min": 13,
+            "max": 16,
+            "device": "€"
+        },
+        "qa": "Bonne",
+        "recommandation": {
+            "Entrées": 70,
+            "Plats": 90,
+            "Desserts": 65
+        },
+        "images": [
+            "starling-2.jpeg",
+            "starling-1.jpeg"
+        ],
+        "descriptions": {
+            "full": "Starling, c'est un restaurant qui réserve des surprises à chaque coin de table. L'atmosphère chaleureuse et conviviale crée une toile de fond parfaite pour découvrir une cuisine durable et de première qualité. Dès le premier regard, la promesse de plats délicieux est évidente.<br>Le restaurant Starling se démarque par son engagement envers des pratiques durables, et cette approche se ressent dans chaque plat. Des ingrédients de qualité sont méticuleusement assemblés pour créer des saveurs qui captivent les papilles. La simplicité et l'attention aux détails caractérisent une cuisine qui impressionne dès la première bouchée.<br>En résumé, Starling ne se contente pas d'offrir un repas, mais plutôt une expérience culinaire qui éveille les sens. Pour ceux qui apprécient la bonne nourriture, l'ambiance agréable et une touche de durabilité, ce restaurant promet une escapade gustative inoubliable.",
+            "short": "Starling est un restaurant plein de surprises, un univers sympathique et de la nouriture durable et à première vu.. De bonne qualité!"
+        }
+    },
+    {
+        "name": "6 AM Fried Chicken",
+        "website": "https://www.instagram.com/6am_friedchicken/?hl=fr",
+        "medal": false,
+        "stars": 3.5,
+        "type": "Poulet Frit",
+        "cost": {
+            "min": 16,
+            "max": 20,
+            "device": "€"
+        },
+        "qa": "Moyenne",
+        "recommandation": {
+            "Entrées": "Nan",
+            "Plats": "Nan",
+            "Desserts": "Nan"
+        },
+        "images": [
+            "6am_chicken.jpeg"
+        ],
+        "descriptions": {
+            "full": "Seulement pour 6 AM Fried Chicken",
+            "short": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt voluptates tempore eos debitis inventore ratione."
+        }
+    },
+    {
+        "name": "Yolo Smash Burger",
+        "website": "https://yolosmashburger.fr/",
+        "medal": false,
+        "stars": 2.5,
+        "type": "Burger smashés",
+        "cost": {
+            "min": 11,
+            "max": 13,
+            "device": "€"
+        },
+        "qa": "Moyenne",
+        "recommandation": {
+            "Entrées": "Nan",
+            "Plats": "Nan",
+            "Desserts": "Nan"
+        },
+        "images": [
+            "yolo_smash.jpeg"
+        ],
+        "descriptions": {
+            "full": "Seulement pour Yolo Smash Burger",
+            "short": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt voluptates tempore eos debitis inventore ratione."
+        }
+    },
+    {
+        "name": "Séoul Station",
+        "website": "https://www.instagram.com/seoulstation_strasbourg_coreen/?hl=fr",
+        "medal": false,
+        "stars": 5,
+        "type": "Coréen",
+        "cost": {
+            "min": 20,
+            "max": 25,
+            "device": "€"
+        },
+        "qa": "Haute",
+        "recommandation": {
+            "Entrées": "Nan",
+            "Plats": "Nan",
+            "Desserts": "Nan"
+        },
+        "images": [
+            "seoul_station.jpeg"
+        ],
+        "descriptions": {
+            "full": "Seulement pour Séoul Station",
+            "short": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt voluptates tempore eos debitis inventore ratione."
+        }
+    },
+    {
+        "name": "Finkstuebel",
+        "website": "https://restaurant-finkstuebel.com/",
+        "medal": true,
+        "stars": 5,
+        "type": "Alsacien",
+        "cost": {
+            "min": 25,
+            "max": 30,
+            "device": "€"
+        },
+        "qa": "Trés Haute",
+        "recommandation": {
+            "Entrées": "Nan",
+            "Plats": "Nan",
+            "Desserts": "Nan"
+        },
+        "images": [
+            "finkstuebel.jpeg"
+        ],
+        "descriptions": {
+            "full": "Seulement pour Finkstuebel",
+            "short": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt voluptates tempore eos debitis inventore ratione."
+        }
+    },
+    {
+        "name": "Ace Smash Burger",
+        "website": "https://www.instagram.com/ace.strasbourg/?hl=fr",
+        "medal": false,
+        "stars": 4,
+        "type": "Burger smashés",
+        "cost": {
+            "min": 13,
+            "max": 16,
+            "device": "€"
+        },
+        "qa": "Moyenne",
+        "recommandation": {
+            "Entrées": "Nan",
+            "Plats": "Nan",
+            "Desserts": "Nan"
+        },
+        "images": [
+            "ace1.jpeg",
+            "ace2.jpeg"
+        ],
+        "descriptions": {
+            "full": "Seulement pour Ace Smash Burger",
+            "short": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt voluptates tempore eos debitis inventore ratione."
+        }
+    },
+    {
+        "name": "Kebab House",
+        "website": "https://fr-fr.facebook.com/HouseKebabGrill/",
+        "medal": false,
+        "stars": 3,
+        "type": "Kebab",
+        "cost": {
+            "min": 11,
+            "max": 14,
+            "device": "€"
+        },
+        "qa": "Moyenne",
+        "recommandation": {
+            "Entrées": "Nan",
+            "Plats": "Nan",
+            "Desserts": "Nan"
+        },
+        "images": [
+            "kebab_house.jpeg"
+        ],
+        "descriptions": {
+            "full": "Seulement pour Kebab House",
+            "short": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt voluptates tempore eos debitis inventore ratione."
+        }
+    },
+    {
+        "name": "Le Grand Shanghai",
+        "website": "https://legrandshanghai.fr/",
+        "medal": false,
+        "stars": 2,
+        "type": "Chinois à Volonté",
+        "cost": {
+            "min": 16,
+            "max": 20,
+            "device": "€"
+        },
+        "qa": "Basse",
+        "recommandation": {
+            "Entrées": "Nan",
+            "Plats": "Nan",
+            "Desserts": "Nan"
+        },
+        "images": [
+            "le_grand_shangai-2.jpeg",
+            "le_grand_shangai-1.jpeg"
+        ],
+        "descriptions": {
+            "full": "Seulement pour Le Grand Shanghai",
+            "short": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt voluptates tempore eos debitis inventore ratione."
+        }
+    },
+    {
+        "name": "Bang Burgers",
+        "website": "https://www.bangburgers.com/",
+        "medal": true,
+        "stars": 5,
+        "type": "Burger smashés",
+        "cost": {
+            "min": 11,
+            "max": 14,
+            "device": "€"
+        },
+        "qa": "Haute",
+        "recommandation": {
+            "Entrées": "Nan",
+            "Plats": "Nan",
+            "Desserts": "Nan"
+        },
+        "images": [
+            "bang_burger-1.jpeg",
+            "bang_burger-2.jpeg"
+        ],
+        "descriptions": {
+            "full": "Seulement pour Bang Burgers",
+            "short": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt voluptates tempore eos debitis inventore ratione."
+        }
+    },
+    {
+        "name": "East Canteen",
+        "website": "https://eastcanteen.com/",
+        "medal": false,
+        "stars": 4.5,
+        "type": "Asiatique",
+        "cost": {
+            "min": 17,
+            "max": 23,
+            "device": "€"
+        },
+        "qa": "Haute",
+        "recommandation": {
+            "Entrées": "Nan",
+            "Plats": "Nan",
+            "Desserts": "Nan"
+        },
+        "images": [
+            "east_canteen-1.jpeg",
+            "east_canteen-2.jpeg"
+        ],
+        "descriptions": {
+            "full": "Seulement pour East Canteen",
+            "short": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt voluptates tempore eos debitis inventore ratione."
+        }
+    },
+    {
+        "name": "Pny",
+        "website": "https://www.pnyburger.com/",
+        "medal": false,
+        "stars": 4,
+        "type": "Burger",
+        "cost": {
+            "min": 16,
+            "max": 20,
+            "device": "€"
+        },
+        "qa": "Moyenne",
+        "recommandation": {
+            "Entrées": "Nan",
+            "Plats": "Nan",
+            "Desserts": "Nan"
+        },
+        "images": [
+            "pny-1.jpeg",
+            "pny-2.jpeg"
+        ],
+        "descriptions": {
+            "full": "Seulement pour Pny",
+            "short": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt voluptates tempore eos debitis inventore ratione."
+        }
+    },
+    {
+        "name": "Black & White",
+        "website": "https://bnwburger.com/",
+        "medal": false,
+        "stars": 3,
+        "type": "Burger",
+        "cost": {
+            "min": 13,
+            "max": 16,
+            "device": "€"
+        },
+        "qa": "Basse",
+        "recommandation": {
+            "Entrées": "Nan",
+            "Plats": "Nan",
+            "Desserts": "Nan"
+        },
+        "images": [
+            "black&white-1.jpg"
+        ],
+        "descriptions": {
+            "full": "Seulement pour Black & White",
+            "short": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt voluptates tempore eos debitis inventore ratione."
+        }
+    },
+    {
+        "name": "Millenium",
+        "website": "https://www.facebook.com/samir.atchamiri/?locale=fr_FR",
+        "medal": false,
+        "stars": 3.5,
+        "type": "Tacos",
+        "cost": {
+            "min": 10,
+            "max": 16,
+            "device": "€"
+        },
+        "qa": "Moyenne",
+        "recommandation": {
+            "Entrées": "Nan",
+            "Plats": "Nan",
+            "Desserts": "Nan"
+        },
+        "images": [
+            "millenium-1.jpeg",
+            "millenium-2.jpeg",
+            "millenium-3.jpeg"
+        ],
+        "descriptions": {
+            "full": "Seulement pour Millenium",
+            "short": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt voluptates tempore eos debitis inventore ratione."
+        }
+    },
+    {
+        "name": "Fat Pasta",
+        "website": "https://www.ubereats.com/fr-en/store/fat-pasta-quartier-de-la-cathedrale/MZHuqFCSVpyR-7WkE3dmig?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjI3JTIwUnVlJTIwZHUlMjBSZW5hcmQlMjIlMkMlMjJyZWZlcmVuY2UlMjIlM0ElMjJDaElKWVlnVVo4VG01VWNSUFlQZTdJQVVsYTAlMjIlMkMlMjJyZWZlcmVuY2VUeXBlJTIyJTNBJTIyZ29vZ2xlX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDguNTk4MTE2OTk5OTk5OTklMkMlMjJsb25naXR1ZGUlMjIlM0EyLjQ5NDMxMSU3RA%3D%3D",
+        "medal": false,
+        "stars": 2.5,
+        "type": "Pâtes",
+        "cost": {
+            "min": 12,
+            "max": 15,
+            "device": "€"
+        },
+        "qa": "Basse",
+        "recommandation": {
+            "Entrées": "Nan",
+            "Plats": "Nan",
+            "Desserts": "Nan"
+        },
+        "images": [
+            "fat_pasta.jpeg"
+        ],
+        "descriptions": {
+            "full": "Seulement pour Fat Pasta",
+            "short": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt voluptates tempore eos debitis inventore ratione."
+        }
+    },
+    {
+        "name": "O Tacos",
+        "website": "https://o-tacos.com/",
+        "medal": false,
+        "stars": 2.5,
+        "type": "Tacos",
+        "cost": {
+            "min": 10,
+            "max": 15,
+            "device": "€"
+        },
+        "qa": "Basse",
+        "recommandation": {
+            "Entrées": "Nan",
+            "Plats": "Nan",
+            "Desserts": "Nan"
+        },
+        "images": [
+            "o_tacos-1.jpg",
+            "o_tacos-2.jpg"
+        ],
+        "descriptions": {
+            "full": "Seulement pour O'Tacos",
+            "short": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt voluptates tempore eos debitis inventore ratione."
+        }
+    },
+    {
+        "name": "Matsumotoya",
+        "website": "https://restaurant-matsumotoya.com/",
+        "medal": false,
+        "stars": 4.5,
+        "type": "Japonais",
+        "cost": {
+            "min": 15,
+            "max": 20,
+            "device": "€"
+        },
+        "qa": "Haute",
+        "recommandation": {
+            "Entrées": "Nan",
+            "Plats": "Nan",
+            "Desserts": "Nan"
+        },
+        "images": [
+            ""  
+        ],
+        "descriptions": {
+            "full": "Seulement pour Matsumotoya",
+            "short": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt voluptates tempore eos debitis inventore ratione."
+        }
+    },
+    {
+        "name": "Chickicko",
+        "website": "",
+        "medal": false,
+        "stars": 3,
+        "type": "Asiatique",
+        "cost": {
+            "min": 12,
+            "max": 18,
+            "device": "€"
+        },
+        "qa": "Basse",
+        "recommandation": {
+            "Entrées": "Nan",
+            "Plats": "Nan",
+            "Desserts": "Nan"
+        },
+        "images": [
+            ""  
+        ],
+        "descriptions": {
+            "full": "Seulement pour Chickicko",
+            "short": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt voluptates tempore eos debitis inventore ratione."
+        }
+    }
+]

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RestoNation</title>
+    <link rel="icon" href="restaurants/images/logos/burger.png">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<header>
+    <div class="side-icon">
+        <span class="top"></span>
+        <span class="band" id="band"></span>
+    </div>
+    <div class="align-top">
+        <div class="item">
+            <div>Maison</div>
+            <span></span>
+            <div onclick="loadData('all')">Restaurants</div>
+        </div>
+    </div>
+    <div class="align-bottom">
+        <div class="msr-filled" style="transform: rotate(270deg)" onclick="scrollToElement('ttllle')">arrow_forward_ios</div>
+    </div>
+</header>
+<body>
+    <section class="presentation">
+        <div class="title">
+            Rest<img src="restaurants/images/logos/burger.png">Nation
+        </div>
+        <div class="selection">
+            <div class="cards" id="cards"></div>
+        </div>
+    </section>
+    <section class="motiv">
+        <div class="cont">
+            <div class="title">Pourquoi ce SiteWeb?</div>
+            <div class="txt">
+                Nous sommes deux étudiants en classe préparatoire passionnés de gastronomie qui se lancent dans l'aventure de créer un site web dédié à la scène culinaire strasbourgeoise. Notre objectif est simple : partager nos découvertes et avis sur les restaurants.
+                <br>
+                À travers des critiques honnêtes et des recommandations, nous souhaitons créer une plateforme principalement informelle. Notre approche à deux permettra d'apporter des perspectives variées sur les différentes expériences culinaires que nous vivrons.
+                <br>
+                Restez connectés pour des articles détaillés sur nos coups de cœur et nos trouvailles gastronomiques à Strasbourg. Ensemble, explorons la richesse de la cuisine locale et partageons nos aventures avec la communauté des amateurs de bonne chère!
+            </div>
+        </div>
+    </section>
+    <section class="abtus">
+
+    </section>
+    <section class="contact">
+
+    </section>
+    <section class="leavecom">
+
+    </section>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
