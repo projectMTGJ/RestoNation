@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body>
+<body data-aos="fade-up" data-aos-duration="800">
     <header>
         <div class="title" data-aos="zoom-in-down" data-aos-duration="800" data-aos-delay="200">
             Rest<img src="images/burger.png" data-aos="zoom-out" data-aos-duration="800" data-aos-delay="400">Nation
@@ -22,9 +22,9 @@
         </div>
     </header>
 
-    <div data-aos="fade-up" data-aos-duration="800" class="separation"><span class="bef"></span><div class="title">Informations</div><span class="aft"></span></div>
+    <div class="separation"><span class="bef"></span><div class="title">Informations</div><span class="aft"></span></div>
     
-    <section data-aos="fade-up" data-aos-duration="800">
+    <section>
         <div class="block">
             <div class="title">Nom du restaurant<span style="color: rgb(185, 0, 0);">*</span></div>
             <div class="content">
@@ -32,7 +32,7 @@
             </div>
         </div>
     </section>
-    <section data-aos="fade-up" data-aos-duration="800">
+    <section>
         <div class="block">
             <div class="title">Date de test du restaurant<span style="color: rgb(185, 0, 0);">*</span></div>
             <div class="content">
@@ -40,7 +40,7 @@
             </div>
         </div>
     </section>
-    <section data-aos="fade-up" data-aos-duration="800">
+    <section>
         <div class="block">
             <div class="title">Type de restaurant<span style="color: rgb(185, 0, 0);">*</span></div>
             <div class="content">
@@ -48,7 +48,7 @@
             </div>
         </div>
     </section>
-    <section data-aos="fade-up" data-aos-duration="800">
+    <section>
         <div class="block">
             <div class="title">Coût du restaurant<span style="color: rgb(185, 0, 0);">*</span></div>
             <div class="content">
@@ -56,42 +56,47 @@
             </div>
         </div>
     </section>
-    <section data-aos="fade-up" data-aos-duration="800">
+    <section>
         <div class="block">
             <div class="title">Qualité globale<span style="color: rgb(185, 0, 0);">*</span></div>
             <div class="content">
-                <input class="write" type="text" placeholder="Qualité globale">
+                <div class="top-values-sld"><div class="val">0</div><div class="val">1</div><div class="val">2</div><div class="val">3</div><div class="val">4</div><div class="val">5</div></div>
+                <input type="range" min="0" max="100" value="0" class="slider" id="myRange">
             </div>
         </div>
     </section>
-    <section data-aos="fade-up" data-aos-duration="800">
+    <section>
         <div class="block">
             <div class="title">Rapport Quantité/Qualité prix<span style="color: rgb(185, 0, 0);">*</span></div>
             <div class="content">
-                <input class="write" type="text" placeholder="Rapport Quantité/Qualité prix">
+                <div class="top-values-sld"><div class="val">0</div><div class="val">1</div><div class="val">2</div><div class="val">3</div><div class="val">4</div><div class="val">5</div></div>
+                <input type="range" min="0" max="100" value="0" class="slider" id="myRange">
             </div>
         </div>
     </section>
-    <section data-aos="fade-up" data-aos-duration="800">
+    <section>
         <div class="block">
             <div class="title">Testeurs du restaurant<span style="color: rgb(185, 0, 0);">*</span></div>
             <div class="content">
-                <input class="write" type="text" placeholder="Testeurs du restaurant">
+                
             </div>
         </div>
     </section>
-    <section data-aos="fade-up" data-aos-duration="800">
+    <section>
         <div class="block">
             <div class="title">Dark kitchen<span style="color: rgb(185, 0, 0);">*</span></div>
             <div class="content">
-                <input class="write" type="text" placeholder="Dark kitchen">
+                <select class="selector">
+                    <option value="non">Non</option>
+                    <option value="oui">Oui</option>
+                </select>
             </div>
         </div>
     </section>
     
-    <div data-aos="fade-up" data-aos-duration="800" class="separation"><span class="bef"></span><div class="title">Choix</div><span class="aft"></span></div>
+    <div class="separation"><span class="bef"></span><div class="title">Choix</div><span class="aft"></span></div>
 
-    <section data-aos="fade-up" data-aos-duration="800">
+    <section>
         <div class="block">
             <div class="title">Site Web</div>
             <div class="content">
@@ -100,9 +105,9 @@
         </div>
     </section>
 
-    <div data-aos="fade-up" data-aos-duration="800" class="separation"><span class="bef"></span><div class="title">Liens</div><span class="aft"></span></div>
+    <div class="separation"><span class="bef"></span><div class="title">Liens</div><span class="aft"></span></div>
     
-    <section data-aos="fade-up" data-aos-duration="800">
+    <section>
         <div class="block">
             <div class="title">Site Web</div>
             <div class="content">

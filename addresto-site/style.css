@@ -83,7 +83,6 @@ header {
     & div {
         font-size: 40px;
         font-weight: 700;
-        margin-bottom: 5px;
         margin-top: 0%;
     }
     & .bef, .aft {
@@ -92,10 +91,10 @@ header {
         width: 100%;
     }
     & .bef {
-        background-image: linear-gradient(240deg, #7a7a7a, #00000000);
+        background-image: linear-gradient(240deg, #7a7a7a 60%, #00000000);
     }
     & .aft {
-        background-image: linear-gradient(90deg, #7a7a7a, #00000000);
+        background-image: linear-gradient(90deg, #7a7a7a 60%, #00000000);
     }
 }
 
@@ -112,7 +111,7 @@ section {
         & .title {
             margin-left: 5px;
             font-size: 24px;
-            font-weight: 700;
+            font-weight: 600;
         }
         & .content {
             display: flex;
@@ -120,7 +119,7 @@ section {
             justify-content: space-between;
             height: 100%;
             background-color: #61616113;
-            padding: 5px;
+            padding: 6px;
             border-radius: 15px;
             & .write {
                 outline: none;
@@ -136,7 +135,7 @@ section {
                 resize: none;
                 width: calc(100% - 20px);
                 font-family: 'poppins';
-                caret-color: rgb(200, 200, 200);
+                caret-color: rgb(0, 0, 0);
                 &:focus {
                     border: 2px solid #7a7a7a !important;
                     border-radius: 10px !important;
@@ -145,6 +144,41 @@ section {
                     border: 2px solid #7a7a7aa6;
                     border-radius: 15px;
                 }
+            }
+            & .top-values-sld {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 0 10px 0 10px;
+                font-weight: 700;
+                font-size: 20px;
+            }
+            & .slider {
+                display: flex;
+                flex-direction: row;
+                appearance: none;
+                border-radius: 90px;
+                height: 15px;
+                background-color: #7a7a7a46;
+            }
+            & .slider::-webkit-slider-thumb {
+                appearance: none;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background: rgb(255, 165, 104);
+                cursor: pointer;
+            }
+            & .selector {
+                border: 2px solid #7a7a7a46;
+                border-radius: 10px;
+                outline: none;
+                padding: 5px 8px;
+                color: #000000;
+                font-weight: 600;
+                font-size: 21px;
+                width: 100%;
+                background-color: #6464642f;
             }
         }
     }
