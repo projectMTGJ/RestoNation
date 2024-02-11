@@ -61,7 +61,7 @@ header {
             height: 57px;
             border-radius: 90px;
             overflow: visible;
-            animation: bgr infinite 10s ease;
+            -webkit-overflow: visible;
         }
     }
     & .undertext {
@@ -77,17 +77,17 @@ header {
     width: 90%;
     display: flex;
     flex-direction: row;
-    gap: 25px;
     align-items: center;
+    gap: 25px;
     & div {
         font-size: 50px;
-        font-weight: 600;
+        font-weight: 700;
         margin-bottom: 5px;
         margin-top: 0%;
     }
     & .bef, .aft {
         border-radius: 90px;
-        height: 3px;
+        padding: 3px;
         width: 100%;
     }
     & .bef {
@@ -100,7 +100,49 @@ header {
 
 section {
     display: flex;
-    flex-direction: column;
-    background-color: aqua;
+    align-items: center;
     width: 95%;
+    & .block {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        & .title {
+            margin-left: 5px;
+            font-size: 28px;
+            font-weight: 700;
+        }
+        & .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            background-color: #61616113;
+            padding: 5px;
+            border-radius: 15px;
+            & .write {
+                outline: none;
+                background-color: #6464642f;
+                border: 2px solid #7a7a7a46;
+                border-radius: 10px;
+                padding: 5px 8px;
+                color: aliceblue;
+                font-size: 20px;
+                width: 100%;
+                transition: ease 0.2s;
+                resize: none;
+                width: calc(100% - 20px);
+                font-family: 'poppins';
+                caret-color: rgb(200, 200, 200);
+                &:focus {
+                    border: 2px solid #7a7a7a !important;
+                    border-radius: 10px !important;
+                }
+                &:hover {
+                    border: 2px solid #7a7a7aa6;
+                    border-radius: 15px;
+                }
+            }
+        }
+    }
 }
