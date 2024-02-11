@@ -1,0 +1,106 @@
+.msr-filled {
+    font-family: 'Material Symbols Rounded';
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 700,
+    'GRAD' 200,
+    'opsz' 48
+}
+
+.msr-empty {
+    font-family: 'Material Symbols Rounded';
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 700,
+    'GRAD' 200,
+    'opsz' 48
+}
+
+html {
+    --odd-color: rgba(255, 128, 0, 0.8);
+    --even-color: rgba(255, 196, 0, 0.8);
+    --df-color: rgb(255, 151, 81);
+    --dp-color: rgba(0, 0, 0, 0.7);
+    user-select: none;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    cursor: default;
+    background: linear-gradient(25deg, rgba(209, 114, 19, 0.2), rgba(209, 151, 26, 0.3));
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    &::-webkit-scrollbar {
+        width: 5px;
+        height: 3px;
+        background: #505050;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #a0a0a0;
+        border-radius: 90px;
+        transition: ease 0.4s;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: var(--df-color);
+    }
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & .title {
+        font-size: 100px;
+        font-weight: 800;
+        & img {
+            height: 57px;
+            border-radius: 90px;
+            overflow: visible;
+            animation: bgr infinite 10s ease;
+        }
+    }
+    & .undertext {
+        font-size: 24px;
+        font-weight: 600;
+        font-style: italic;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+}
+
+.separation {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    align-items: center;
+    & div {
+        font-size: 50px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        margin-top: 0%;
+    }
+    & .bef, .aft {
+        border-radius: 90px;
+        height: 3px;
+        width: 100%;
+    }
+    & .bef {
+        background-image: linear-gradient(240deg, #7a7a7a, #00000000);
+    }
+    & .aft {
+        background-image: linear-gradient(90deg, #7a7a7a, #00000000);
+    }
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    width: 95%;
+}
