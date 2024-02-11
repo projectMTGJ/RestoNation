@@ -25,11 +25,11 @@ html {
 }
 
 body {
-    font-family: 'Poppins', Arial, sans-serif;
+    font-family: 'Poppins';
     margin: 0;
     padding: 0;
     cursor: default;
-    background: linear-gradient(25deg, rgba(209, 114, 19, 0.2), rgba(209, 151, 26, 0.3));
+    background-color: rgba(218, 121, 23, 0.2);
     overflow: scroll;
     display: flex;
     flex-direction: column;
@@ -66,7 +66,7 @@ header {
     }
     & .undertext {
         font-size: 24px;
-        font-weight: 600;
+        font-weight: 700;
         font-style: italic;
         text-align: center;
         margin-bottom: 25px;
@@ -79,8 +79,9 @@ header {
     flex-direction: row;
     align-items: center;
     gap: 25px;
+    margin-top: 10px;
     & div {
-        font-size: 50px;
+        font-size: 40px;
         font-weight: 700;
         margin-bottom: 5px;
         margin-top: 0%;
@@ -101,6 +102,7 @@ header {
 section {
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
     width: 95%;
     & .block {
         display: flex;
@@ -109,7 +111,7 @@ section {
         width: 100%;
         & .title {
             margin-left: 5px;
-            font-size: 28px;
+            font-size: 24px;
             font-weight: 700;
         }
         & .content {
@@ -126,8 +128,9 @@ section {
                 border: 2px solid #7a7a7a46;
                 border-radius: 10px;
                 padding: 5px 8px;
-                color: aliceblue;
-                font-size: 20px;
+                color: #000000;
+                font-weight: 600;
+                font-size: 21px;
                 width: 100%;
                 transition: ease 0.2s;
                 resize: none;
