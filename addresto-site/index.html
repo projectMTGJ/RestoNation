@@ -19,6 +19,7 @@
         <div class="undertext">
             <div data-aos="fade-up-right" data-aos-duration="800" data-aos-delay="800">Formulaire de notation.</div>
             <div data-aos="fade-up-left" data-aos-duration="800" data-aos-delay="1000">Gabriel.J & Maxime.T</div>
+            <div data-aos="fade-up-right" data-aos-duration="800" data-aos-delay="1200">Toute question possedant un (<span style="color: rgb(185, 0, 0);">*</span>) est obligatoire à renseigner</div>
         </div>
     </header>
 
@@ -36,7 +37,7 @@
         <div class="block">
             <div class="title">Date de test du restaurant<span style="color: rgb(185, 0, 0);">*</span></div>
             <div class="content">
-                <input class="write" type="text" placeholder="Date de test du restaurant">
+                <input class="dater" type="date" id="testing-time" value="2018-06-12"/>
             </div>
         </div>
     </section>
@@ -52,7 +53,11 @@
         <div class="block">
             <div class="title">Coût du restaurant<span style="color: rgb(185, 0, 0);">*</span></div>
             <div class="content">
-                <input class="write" type="text" placeholder="Coût du restaurant">
+                <div class="numbered">
+                    <input type="number" id="priceMin" placeholder="Prix Minimum moyen"/>
+                    <div>/</div>
+                    <input type="number" id="priceMax" placeholder="Prix Maximum moyen"/>
+                </div>
             </div>
         </div>
     </section>
@@ -61,7 +66,7 @@
             <div class="title">Qualité globale<span style="color: rgb(185, 0, 0);">*</span></div>
             <div class="content">
                 <div class="top-values-sld"><div class="val">0</div><div class="val">1</div><div class="val">2</div><div class="val">3</div><div class="val">4</div><div class="val">5</div></div>
-                <input type="range" min="0" max="100" value="0" class="slider" id="myRange">
+                <input type="range" min="0" max="50" class="slider" id="range-qa" value="0">
             </div>
         </div>
     </section>
@@ -70,7 +75,7 @@
             <div class="title">Rapport Quantité/Qualité prix<span style="color: rgb(185, 0, 0);">*</span></div>
             <div class="content">
                 <div class="top-values-sld"><div class="val">0</div><div class="val">1</div><div class="val">2</div><div class="val">3</div><div class="val">4</div><div class="val">5</div></div>
-                <input type="range" min="0" max="100" value="0" class="slider" id="myRange">
+                <input type="range" min="0" max="50" class="slider" id="range-rqp" value="0">
             </div>
         </div>
     </section>
@@ -78,7 +83,11 @@
         <div class="block">
             <div class="title">Testeurs du restaurant<span style="color: rgb(185, 0, 0);">*</span></div>
             <div class="content">
-                
+                <div class="checkbox">
+                    <label><input type="checkbox" id="user1" value="JAGUENEAU Gabriel">JAGUENEAU Gabriel</label>
+                    <label><input type="checkbox" id="user2" value="THIRY Maxime">THIRY Maxime</label>
+                    <label><input type="checkbox" id="user3" value="Anonymous Person">Anonymous Person</label>
+                </div>
             </div>
         </div>
     </section>
@@ -93,8 +102,16 @@
             </div>
         </div>
     </section>
+    <section>
+        <div class="block">
+            <div class="title">Site Web</div>
+            <div class="content">
+                <input class="url" type="url" name="url" id="url" placeholder="https://example.com" pattern="https://.*" required/>
+            </div>
+        </div>
+    </section>
     
-    <div class="separation"><span class="bef"></span><div class="title">Choix</div><span class="aft"></span></div>
+    <div class="separation"><span class="bef"></span><div class="title">Selection</div><span class="aft"></span></div>
 
     <section>
         <div class="block">
