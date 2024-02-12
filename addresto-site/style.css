@@ -292,7 +292,7 @@ section {
             }
             & .timer {
                 display: flex;
-                flex-direction: row;
+                -webkit-flex-direction: row;
                 align-items: center;
                 gap: 10px;
                 & .setdate-today {
