@@ -5,9 +5,6 @@
     <title>RestoNation - ajout d'un restaurant</title>
     <link rel="icon" href="images/burger.png">
     <link rel="stylesheet" href="style.css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
@@ -37,7 +34,10 @@
         <div class="block">
             <div class="title">Date de test du restaurant<span style="color: rgb(185, 0, 0);">*</span></div>
             <div class="content">
-                <input class="dater" type="date" id="testing-time" value="2018-06-12"/>
+                <div class="timer">
+                    <input class="dater" type="date" id="testing-time"/>
+                    <div class="setdate-today" onclick="action.date('testing-time')">Aujourd'hui</div>
+                </div>
             </div>
         </div>
     </section>
