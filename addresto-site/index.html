@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body data-aos="fade-up" data-aos-duration="800">
+<body data-aos="fade-up" data-aos-duration="800" id="body">
     <header>
         <div class="title" data-aos="zoom-in-down" data-aos-duration="800" data-aos-delay="200">
             Rest<img src="images/burger.png" data-aos="zoom-out" data-aos-duration="800" data-aos-delay="400">Nation
@@ -22,7 +22,7 @@
 
     <div class="separation"><span class="bef"></span><div class="title">Informations</div><span class="aft"></span></div>
     
-    <section>
+    <section id="">
         <div class="block">
             <div class="title">Nom du restaurant<span style="color: rgb(185, 0, 0);">*</span></div>
             <div class="content">
@@ -55,8 +55,12 @@
             <div class="content">
                 <div class="numbered">
                     <input type="number" id="priceMin" placeholder="Prix Minimum moyen"/>
-                    <div>/</div>
+                    <div class="dived">/</div>
                     <input type="number" id="priceMax" placeholder="Prix Maximum moyen"/>
+                    <select class="selector dived" style="padding: 8px 20px 3px 20px;">
+                        <option value="euro">€</option>
+                        <option value="dolar">$</option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -66,7 +70,7 @@
             <div class="title">Qualité globale<span style="color: rgb(185, 0, 0);">*</span></div>
             <div class="content">
                 <div class="top-values-sld"><div class="val">0</div><div class="val">1</div><div class="val">2</div><div class="val">3</div><div class="val">4</div><div class="val">5</div></div>
-                <input type="range" min="0" max="50" class="slider" id="range-qa" value="0">
+                <input type="range" min="0" max="20" class="slider" id="range-qa" value="0">
             </div>
         </div>
     </section>
@@ -75,7 +79,7 @@
             <div class="title">Rapport Quantité/Qualité prix<span style="color: rgb(185, 0, 0);">*</span></div>
             <div class="content">
                 <div class="top-values-sld"><div class="val">0</div><div class="val">1</div><div class="val">2</div><div class="val">3</div><div class="val">4</div><div class="val">5</div></div>
-                <input type="range" min="0" max="50" class="slider" id="range-rqp" value="0">
+                <input type="range" min="0" max="20" class="slider" id="range-rqp" value="0">
             </div>
         </div>
     </section>
@@ -104,7 +108,7 @@
     </section>
     <section>
         <div class="block">
-            <div class="title">Site Web</div>
+            <div class="title">Site Web<span style="color: rgb(185, 0, 0);">*</span></div>
             <div class="content">
                 <input class="url" type="url" name="url" id="url" placeholder="https://example.com" pattern="https://.*" required/>
             </div>
@@ -114,21 +118,66 @@
     <div class="separation"><span class="bef"></span><div class="title">Selection</div><span class="aft"></span></div>
 
     <section>
-        <div class="block">
-            <div class="title">Site Web</div>
-            <div class="content">
-                <input class="write" type="text" placeholder="Site Web">
+        <div class="conteneur">
+            <div class="head">
+                <div class="title">Entrées</div>
+                <div class="adder" onclick="manage.addCompo('Entrée')">Ajouter<img src="images/plus.svg" alt="add Entrées"></div>
             </div>
+            <div class="cards" id="Entrée"></div>
+        </div>
+    </section>
+    <section>
+        <div class="conteneur">
+            <div class="head">
+                <div class="title">Plats<span style="color: rgb(185, 0, 0);">*</span></div>
+                <div class="adder" onclick="manage.addCompo('Plat')">Ajouter<img src="images/plus.svg" alt="add Plats"></div>
+            </div>
+            <div class="cards" id="Plat"></div>
+        </div>
+    </section>
+    <section>
+        <div class="conteneur">
+            <div class="head">
+                <div class="title">Accompagnements</div>
+                <div class="adder" onclick="manage.addCompo('Accompagnement')">Ajouter<img src="images/plus.svg" alt="add Accompagnements"></div>
+            </div>
+            <div class="cards" id="Accompagnement"></div>
+        </div>
+    </section>
+    <section>
+        <div class="conteneur">
+            <div class="head">
+                <div class="title">Desserts</div>
+                <div class="adder"  onclick="manage.addCompo('Dessert')">Ajouter<img src="images/plus.svg" alt="add Desserts"></div>
+            </div>
+            <div class="cards" id="Dessert"></div>
+        </div>
+    </section>
+    <section>
+        <div class="conteneur">
+            <div class="head">
+                <div class="title">Boissons</div>
+                <div class="adder" onclick="manage.addCompo('Boisson')">Ajouter<img src="images/plus.svg" alt="add Boissons"></div>
+            </div>
+            <div class="cards" id="Boisson"></div>
         </div>
     </section>
 
-    <div class="separation"><span class="bef"></span><div class="title">Liens</div><span class="aft"></span></div>
+    <div class="separation"><span class="bef"></span><div class="title">Descriptions</div><span class="aft"></span></div>
     
     <section>
         <div class="block">
-            <div class="title">Site Web</div>
+            <div class="title">Courte</div>
             <div class="content">
-                <input class="write" type="text" placeholder="Site Web">
+                <textarea class="write" type="text" rows="2" placeholder="Votre avis sur le restaurant en quelques mots."></textarea>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="block">
+            <div class="title">Longue</div>
+            <div class="content">
+                <textarea class="write" type="text" rows="5" placeholder="Votre avis sur le restaurant en quelques mots."></textarea>
             </div>
         </div>
     </section>
