@@ -11,13 +11,18 @@ const action = {
 const manage = {
     addCompo: function(origin) {
         const doc = document.getElementById(origin);
+        const num = doc.children.length;
+
+        if (num >= 6) return;
+        
+
         const card = document.createElement('div');
         card.classList.add('card');
-        card.id = `${doc.children.length}${origin}`
+        card.id = `${num}${origin}`
         card.innerHTML = `
         <div class="titler">
             <div class="ins"><img src="images/angle-small-down.svg" alt="add ${origin}">${origin}</div>
-            <div class="del" onclick="manage.removeCompo('${doc.children.length}${origin}', '${origin}')">Supprimer<img src="images/plus.svg" alt="delete component"></div>
+            <div class="del" onclick="manage.removeCompo('${num}${origin}', '${origin}')">Supprimer<img src="images/plus.svg" alt="delete component"></div>
         </div>
         <div class="contenenrt">
             <input class="write" type="text" placeholder="Nom sur la carte">
@@ -42,6 +47,10 @@ const manage = {
     removeCompo: function(id, origin) {
         const doc = document.getElementById(origin);
         const card = document.getElementById(id);
-        doc.removeChild(card)
+        doc.removeChild(card);
+    },
+    validate: function() {
+        document.getElementById('volet').classList.toggle('ns');
+        document.getElementById('body').classList.toggle('notmoving')
     }
 }
