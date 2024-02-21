@@ -133,7 +133,7 @@ section {
                     border: rgb(247, 136, 62) solid 2px;
                 }
                 & img {
-                    height: 35px !important;
+                    height: 33px !important;
                 }
             }
             & .title {
@@ -444,16 +444,15 @@ section {
     font-weight: 600;
     margin-top: 50px;
     margin-bottom: 75px;
-    background-color: rgba(255, 151, 81, 0.8);
-    border: 2px solid rgb(255, 126, 40);
+    background-color: rgba(255, 126, 40, 0.6);
+    border: 4px solid rgb(182, 92, 33);
     padding: 4px 20px;
     border-radius: 90px;
     transition: ease 0.2s;
     cursor: pointer;
-    box-shadow: 5px 5px 15px #000000;
     &:active {
-        background-color: rgba(255, 151, 81, 0.9);
-        box-shadow: 7.5px 7.5px 15px #000000;
+        border: 4px solid rgba(172, 112, 71, 0);
+        background-color: rgba(255, 126, 40);
         transform: scale(1.02);
     }
 }
@@ -464,9 +463,6 @@ section {
     opacity: 0 !important;
     height: 0px !important;
 }
-.notmoving {
-    overflow: hidden;
-}
 .volet {
     z-index: 9;
     transition: ease 0.5s;
@@ -475,7 +471,7 @@ section {
     flex-direction: column;
     align-items: center;
     width: 101%;
-    height: 101vh;
+    height: 100%;
     background-color: #3b3b3bfd;
     bottom: 0;
     opacity: 1;
@@ -485,20 +481,19 @@ section {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        padding: 1.5% 2% 1% 2%;
+        padding: 1% 2% 1% 2%;
         width: 96%;
         & .ttl {
             font-size: 40px;
             color: aliceblue;
             font-weight: 600;
-            margin-left: 15px;
         }
     }
     & .sep {
-        padding: 1.5px;
+        padding: 2px;
         width: 95%;
         background-color: #505050;
-        margin-bottom: 25px;
+        border-radius: 90px;
     }
     & .window {
         height: 100%;
@@ -509,11 +504,13 @@ section {
         display: flex;
         flex-direction: column;
         padding: 15px;
-        gap: 5px;
+        gap: 15px;
+        align-items: center;
         & .general {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 10px;
+            width: 100%;
             & div {
                 display: flex;
                 background-color: #3b3b3bfd;
@@ -525,6 +522,41 @@ section {
                 font-size: 32px;
                 font-weight: 500;
                 color: aliceblue;
+                gap: 10px;
+                & span {
+                    color: rgb(255, 151, 81);
+                }
+            }
+        }
+        & .items {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            width: 100%;
+            & .item {
+                display: flex;
+                flex-direction: column;
+                background-color: #3b3b3bfd;
+                width: calc(100% - 40px);
+                height: fit-content;
+                border-radius: 15px;
+                box-shadow: 2px 2px 5px #000000;
+                padding: 5px 20px;
+                font-size: 32px;
+                font-weight: 500;
+                color: aliceblue;
+                & .ttl {
+                    font-size: 34px;
+                    font-weight: 700;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    & img {
+                        height: 30px !important;
+                        transform: rotateZ(-90deg);
+                        background-color: #00000000 !important;
+                    }
+                }
             }
         }
     }

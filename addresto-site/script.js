@@ -4,7 +4,97 @@ const action = {
         document.getElementById(id).value = date.getFullYear() + '-' + ((date.getMonth() + 1) < 10 ? '0' : '') + (date.getMonth() + 1) + '-' + (date.getDate() < 10 ? '0' : '') + date.getDate();
     },
     collect: function() {
+        const doc = document.getElementById('recap');
+        doc.innerHTML = '';
 
+        const general = document.createElement('div');
+        general.classList.add('general');
+        general.innerHTML = this.createGeneral();
+        
+        const sep = document.createElement('div');
+        sep.classList.add('sep');
+
+        const items = document.createElement('div');
+        items.classList.add('items');
+        items.innerHTML = ``;
+
+        doc.appendChild(general);
+        doc.appendChild(sep);
+        doc.appendChild(items);
+    },
+    createGeneral: function() {
+        return `
+        <div>Nom: <span>${data.name()}</span></div>
+        <div>Date: <span>${data.date()}</span></div>
+        <div>Type: <span>${data.type()}</span></div> 
+        <div>Prix: <span>${data.price()[1]}<${data.price()[0]} ${data.price()[2]}</span></div>
+        <div>QualitéG: <span>${data.qualite()/4}</span></div>
+        <div>Rpqp: <span>${data.rpqp()/4}</span></div>
+        <div>Testeurs: <span>${data.testeurs()}</span></div>
+        <div>DarkKit: <span>${data.dk()}</span></div>
+        <div>SiteWeb: <span>${data.url()}</span></div>
+        <div>Médaille: <span>${data.medal()}</span></div>
+        `
+    },
+    createItem: function(entry) {
+        return entry.map(el => {
+            return `
+            <div class="item">
+                <div class="ttl"><img src="images/angle-small-down.svg" alt="">${el.type}</div>
+                <div>${el.name}</div>
+                <div>${el.qa}</div>
+                <div>${el.reco}</div>
+            </div>
+            `;
+        }).join('');
+    },
+    copy: function() {
+
+    }
+}
+const generalData = ['ndr', 'testing-time', 'tdr', 'pcr', 'range-qa', 'range-rqp', 'checkbox', 'dk', 'url', 'medal'];
+const data = {
+    name: function() {
+        return document.getElementById('ndr').value;
+    },
+    date: function() {
+        return document.getElementById('testing-time').value;
+    },
+    type: function() {
+        return document.getElementById('tdr').value;
+    },
+    price: function() {
+        return [
+            document.getElementById('max-prc').options[document.getElementById('max-prc').selectedIndex].value,
+            document.getElementById('min-prc').options[document.getElementById('min-prc').selectedIndex].value,
+            document.getElementById('device').options[document.getElementById('device').selectedIndex].value
+        ];
+    },
+    qualite: function() {
+        return document.getElementById('range-qa').value;
+    },
+    rpqp: function() {
+        return document.getElementById('range-rqp').value;
+    },
+    testeurs: function() {
+        return Array.from(document.querySelectorAll('.checkbox input[type="checkbox"]')).map(function(checkbox) {
+            if (checkbox.checked) {
+                return checkbox.value;
+            } else {
+                return null;
+            }
+        }).filter(function(value) {
+            return value !== null;
+        });
+    },
+    dk: function() {
+        return document.getElementById('dk').value;
+    },
+    url: function() {
+        return document.getElementById('url').value;
+    },
+    medal: function() {
+        return document.getElementById('medal').value;
     }
 }
 
@@ -12,10 +102,7 @@ const manage = {
     addCompo: function(origin) {
         const doc = document.getElementById(origin);
         const num = doc.children.length;
-
         if (num >= 6) return;
-        
-
         const card = document.createElement('div');
         card.classList.add('card');
         card.id = `${num}${origin}`
@@ -51,6 +138,7 @@ const manage = {
     },
     validate: function() {
         document.getElementById('volet').classList.toggle('ns');
-        document.getElementById('body').classList.toggle('notmoving')
+        window.scrollTo({top: 0});
+        action.collect();
     }
 }
