@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html oncontextmenu="return false;">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>RestoNation - ajout d'un restaurant</title>
@@ -9,6 +9,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body data-aos="fade-up" data-aos-duration="800" id="body">
+
     <header>
         <div class="title" data-aos="zoom-in-down" data-aos-duration="800" data-aos-delay="200">
             Rest<img src="images/burger.png" data-aos="zoom-out" data-aos-duration="800" data-aos-delay="400">Nation
@@ -142,9 +143,9 @@
             <div class="title">Testeurs du restaurant<span style="color: rgb(185, 0, 0);">*</span></div>
             <div class="content">
                 <div class="checkbox" >
-                    <label><input type="checkbox" id="user1" value="J.G">JAGUENEAU Gabriel</label>
-                    <label><input type="checkbox" id="user2" value="T.M">THIRY Maxime</label>
-                    <label><input type="checkbox" id="user3" value="A.P">Anonymous Person</label>
+                    <label><input type="checkbox" id="user1" value="JAGUENEAU Gabriel">JAGUENEAU Gabriel</label>
+                    <label><input type="checkbox" id="user2" value="THIRY Maxime">THIRY Maxime</label>
+                    <label><input type="checkbox" id="user3" value="Anonymous Person">Anonymous Person</label>
                 </div>
             </div>
         </div>
@@ -228,26 +229,9 @@
         </div>
     </section>
 
-    <div class="separation"><span class="bef"></span><div class="title">Descriptions</div><span class="aft"></span></div>
-    
-    <section>
-        <div class="block">
-            <div class="title">Courte</div>
-            <div class="content">
-                <textarea class="write" type="text" rows="2" placeholder="Votre avis sur le restaurant en quelques mots."></textarea>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="block">
-            <div class="title">Longue</div>
-            <div class="content">
-                <textarea class="write" type="text" rows="5" placeholder="Votre avis sur le restaurant en quelques mots."></textarea>
-            </div>
-        </div>
-    </section>
+    <div class="separation"><span class="bef"></span><div class="title">Terminer</div><span class="aft"></span></div>
 
-    <div class="validate" onclick="manage.validate()">Confirmer</div>
+    <div class="validate" onclick="manage.validate()">Confirmer la séléction</div>
 
     <div class="volet ns" id="volet">
         <div class="top">
