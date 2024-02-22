@@ -84,11 +84,10 @@ const action = {
                     "max": ${dat.price[0]},
                     "device": "${dat.price[2]}"
                 },
-                "qa": ${dat.ql},
-                "rqp": ${dat.rpqp},
+                "qa": ${dat.ql/4},
+                "rqp": ${dat.rpqp/4},
                 "testeurs": ${dat.testeurs},
-                "images": [
-                    ${dat.items}
+                "images": [${dat.items}
                 ],
                 "descriptions": { 
                     "full": "",
@@ -103,16 +102,9 @@ const action = {
                 setTimeout(() => {manage.validate()}, 1500);
             });
         } catch(e) {
-            const delttp = document.getElementById('deletetop')
             cpy.style = "background-color: rgba(255, 71, 15, 0.4); border: 4px solid rgba(255, 71, 15, 0.8); color: rgba(255, 71, 15, 1)";
             cpy.innerHTML = "Formulaire incomplet";
-            setTimeout(() => {
-                window.scrollTo({top: 0, behavior: "smooth"})
-                delttp.style = "background-color: rgba(255, 71, 15, 0.4); border: 4px solid rgba(255, 71, 15, 0.8); color: rgba(255, 71, 15, 1)";
-            }, 500);
-            setTimeout(() => {
-                delttp.style = "background-color: rgba(158, 158, 158, 0.2); border: rgba(116, 116, 116, 0.4) solid 2px; color: #000000";
-            }, 3000);
+            setTimeout(() => manage.validate(), 1500);
         }
     }
 }
@@ -150,16 +142,16 @@ const data = {
         return [...entr, ...plat, ...acco, ...dess, ...bois].map(el => {
             const id = el.id.replace(/\d/g, '');
             return `
-                {
-                    "link":"",
-                    "info": {
-                        "Type": "${id}",
-                        "Nom":"${document.getElementById(`${el.id}wrt`).value}",
-                        "Date":"${this.date()}",
-                        "Qualité":"${document.getElementById(`${el.id}qa`).value}",
-                        "Recommandation": ${document.getElementById(`${el.id}reco`).value/4}
-                    }
-                }`;
+                    {
+                        "link":"",
+                        "info": {
+                            "Type": "${id}",
+                            "Nom":"${document.getElementById(`${el.id}wrt`).value}",
+                            "Date":"${this.date()}",
+                            "Qualité":"${document.getElementById(`${el.id}qa`).value}",
+                            "Recommandation": ${document.getElementById(`${el.id}reco`).value/4}
+                        }
+                    }`;
         }).join(',');
     },
     name: function() {
