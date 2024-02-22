@@ -70,36 +70,50 @@ const action = {
         }).join('');
     },
     copy: function() {
-        const dat = data.give();
-        navigator.clipboard.writeText(`{
-            "name": "${dat.nom}",
-            "website": "${dat.url}",
-            "medal": ${dat.medal},
-            "enligne": {},
-            "type": "${dat.type}",
-            "cost": {
-                "min": ${dat.price[1]},
-                "max": ${dat.price[0]},
-                "device": "${dat.price[2]}"
-            },
-            "qa": ${dat.ql},
-            "rqp": ${dat.rpqp},
-            "testeurs": ${dat.testeurs},
-            "images": [
-                ${dat.items}
-            ],
-            "descriptions": { 
-                "full": "",
-                "short": ""
-            },
-            "darkkitchen": false,
-            "localisation": []
-        }`).then(() => {
-            const cpy = document.getElementById('copyend');
-            cpy.style = "background-color: rgba(103, 255, 15, 0.4); border: 4px solid rgba(103, 255, 15, 0.8);";
-            cpy.innerHTML = "Copie effectuée";
-        })
-        setTimeout(() => {manage.validate()}, 1500);
+        const cpy = document.getElementById('copyend');
+        try {
+            const dat = data.give();
+            navigator.clipboard.writeText(`{
+                "name": "${dat.nom}",
+                "website": "${dat.url}",
+                "medal": ${dat.medal},
+                "enligne": {},
+                "type": "${dat.type}",
+                "cost": {
+                    "min": ${dat.price[1]},
+                    "max": ${dat.price[0]},
+                    "device": "${dat.price[2]}"
+                },
+                "qa": ${dat.ql},
+                "rqp": ${dat.rpqp},
+                "testeurs": ${dat.testeurs},
+                "images": [
+                    ${dat.items}
+                ],
+                "descriptions": { 
+                    "full": "",
+                    "short": ""
+                },
+                "darkkitchen": false,
+                "localisation": []
+            }`).then(() => {
+                cpy.style = "background-color: rgba(103, 255, 15, 0.4); border: 4px solid rgba(103, 255, 15, 0.8);  color: rgba(103, 255, 15, 1)";
+                cpy.innerHTML = "Copie effectuée";
+            }).finally(() => {
+                setTimeout(() => {manage.validate()}, 1500);
+            });
+        } catch(e) {
+            const delttp = document.getElementById('deletetop')
+            cpy.style = "background-color: rgba(255, 71, 15, 0.4); border: 4px solid rgba(255, 71, 15, 0.8); color: rgba(255, 71, 15, 1)";
+            cpy.innerHTML = "Formulaire incomplet";
+            setTimeout(() => {
+                window.scrollTo({top: 0, behavior: "smooth"})
+                delttp.style = "background-color: rgba(255, 71, 15, 0.4); border: 4px solid rgba(255, 71, 15, 0.8); color: rgba(255, 71, 15, 1)";
+            }, 500);
+            setTimeout(() => {
+                delttp.style = "background-color: rgba(158, 158, 158, 0.2); border: rgba(116, 116, 116, 0.4) solid 2px; color: #000000";
+            }, 3000);
+        }
     }
 }
 
@@ -233,3 +247,6 @@ const manage = {
         action.collect();
     }
 }
+
+// add the necessary
+manage.addCompo('Plat');
